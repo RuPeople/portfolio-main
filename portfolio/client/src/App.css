@@ -1,0 +1,263 @@
+body {
+  background: #202023 !important;
+}
+
+.header {
+  background: rgba(32, 32, 35, 0.5019607843);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+.header .header__logo {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #D5D5D5 !important;
+}
+.header .header__logo:hover {
+  color: #816797 !important;
+}
+.header .header__logo:hover svg .header__logo_spinning {
+  fill: #816797 !important;
+}
+.header .header__link {
+  font-family: "Satoshi-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #D5D5D5;
+}
+.header .header__link:hover {
+  color: #816797 !important;
+}
+
+.main .main__hello {
+  font-family: "Satoshi-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  text-transform: capitalize;
+  color: #D4D4D4;
+  background: rgba(212, 212, 212, 0.09);
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .main .main__avatar .main__avatar_text h1 {
+    font-family: "Neutral Face";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #d4d4d4;
+  }
+}
+@media (min-width: 577px) {
+  .main .main__avatar .main__avatar_text h1 {
+    font-family: "Neutral Face";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #d4d4d4;
+  }
+}
+.main .main__avatar .main__avatar_text h2 {
+  font-family: "Satoshi-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+}
+.main .main__avatar .main__avatar_image {
+  border: 2px solid rgba(212, 212, 212, 0.65);
+  border-radius: 48px;
+}
+.main .main__about h1 {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+  border-bottom: 2px solid currentColor;
+}
+.main .main__about p {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* or 19px */
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+}
+.main .main__about a {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #D4D4D4;
+  background: rgba(129, 103, 151, 0.81);
+  border-radius: 10px;
+}
+.main .main__bio h1 {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+  border-bottom: 2px solid currentColor;
+}
+.main .main__bio .main__bio_list-group_item {
+  background: none;
+  border: none;
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* identical to box height, or 19px */
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.main .main__bio .main__bio_list-group_item span {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* identical to box height, or 19px */
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.main .main__socials h1 {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+  border-bottom: 2px solid currentColor;
+}
+.main .main__socials .main__socials_link {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* identical to box height, or 19px */
+  display: flex;
+  align-items: center;
+  color: #d4d4d4;
+}
+.main .main__socials .main__socials_link:hover {
+  color: #816797 !important;
+  background: rgba(129, 103, 151, 0.2);
+  border-radius: 4px;
+}
+.main .main__socials .main__socials_link:hover svg > path {
+  fill: #816797 !important;
+}
+
+.footer {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+}
+.footer a {
+  color: #816797;
+}
+.footer a:hover {
+  color: #816797;
+  text-shadow: #673ab7 1px 0 10px;
+}
+
+.portfolio .portfolio__category > h1 {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+  border-bottom: 2px solid currentColor;
+}
+.portfolio .portfolio__category .portfolio__work img {
+  border-radius: 20px;
+}
+.portfolio .portfolio__category .portfolio__work h1 {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.portfolio .portfolio__category .portfolio__work p {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* or 19px */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=App.css.map */
