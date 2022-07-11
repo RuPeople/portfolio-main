@@ -8,10 +8,25 @@ $main-color__text_white: #7D9D9C;
 $main-color__accent_white: #576F72;
 
 body {background: $main-color__bg_dark!important;}
+a {text-decoration: none!important;}
+
+::-moz-selection { /* Code for Firefox */
+  color: $main-color__text_dark;
+  background: $main-color__accent_dark;
+}
+
+::selection {
+  color: $main-color__text_dark;
+  background: $main-color__accent_dark;
+}
+
 
 .header {
   background: #20202380;
   backdrop-filter: blur(10px);
+
+  text-decoration: none;
+
   /* Note: backdrop-filter has minimal browser support */
   .header__logo {
     font-family: 'Neutral Face';
@@ -47,6 +62,36 @@ body {background: $main-color__bg_dark!important;}
     color: #D5D5D5;
     &:hover {
       color: $main-color__accent_dark!important;
+    }
+    &:focus{
+      color: $main-color__accent_dark!important;
+    }
+  }
+  .header__burger{
+    background: rgba($main-color__accent_dark, 0.81);
+    border-radius: 10px;
+    padding: 10px!important;
+    span{
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .header__burger:focus{
+    box-shadow: none;
+  }
+  .header__menu{
+    background: $main-color__bg_dark;
+    border:1px solid $main-color__accent_dark;
+    border-radius: 10px;
+    .header__menu_link{
+      background: none;
+        text-decoration: none;
+        color: $main-color__text_dark;
+      &:hover{
+        background: rgba($main-color__text_dark, 10%);
+      }
     }
   }
 }
@@ -143,6 +188,10 @@ body {background: $main-color__bg_dark!important;}
 
       color: #d4d4d4;
     }
+    .main__about_portfolio-button{
+      border-radius: 10px;
+      text-decoration: none!important;
+    }
     a{
       font-family: 'Satoshi Variable';
       font-style: normal;
@@ -155,9 +204,6 @@ body {background: $main-color__bg_dark!important;}
       text-transform: capitalize;
 
       color: #D4D4D4;
-
-      background: rgba(129, 103, 151, 0.81);
-      border-radius: 10px;
     }
   }
   .main__bio{

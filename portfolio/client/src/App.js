@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter} from "react-router-dom";
 import Model from "./components/Model";
-import Main from "./components/Main";
+import Main from "./pages/Main";
 
 import "./fonts/Satoshi-Regular.otf"
 import "./fonts/Satoshi-MediumItalic.otf"
@@ -28,15 +28,10 @@ const App = observer(() => {
 
     return (
         <BrowserRouter>
-          <ColorModeScript resetCSS theme={theme} initialColorMode={theme.config.initialColorMode} />
-          <ChakraProvider className="App">
             <Header/>
-              <Model/>
-              <AppRouter/>
-              <Footer/>
-
-
-          </ChakraProvider>
+            <Model/>
+            <AppRouter/>
+            <Footer/>
         </BrowserRouter>
     );
 });
