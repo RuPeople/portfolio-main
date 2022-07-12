@@ -307,9 +307,64 @@ a {
   text-align: center;
   color: #FFFFFF;
 }
+.portfolio .portfolio__work .portfolio__work_image {
+  width: 284px;
+  height: 186px;
+}
 
 .breadcrumbs ol {
   padding: 0;
+}
+.breadcrumbs .breadcrumb__separator {
+  color: #d4d4d4;
+}
+.breadcrumbs .breadcrumbs__link {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d4d4d4;
+  border-bottom: 2px solid currentColor;
+}
+.breadcrumbs .breadcrumbs__link_current {
+  font-family: "Neutral Face";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  border-bottom: none;
+  color: #6E5981;
+}
+
+.work .work__description {
+  font-family: "Satoshi Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.8%;
+  /* or 19px */
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.work .work__list .work__list_item .work__list_item-badge {
+  color: #816797;
+  background-color: rgba(129, 103, 151, 0.16);
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.work .work__list .work__list_item .work__list_item-link {
+  color: #816797;
+}
+.work .work__list .work__list_item .work__list_item-text {
+  color: #d4d4d4;
 }
 
 /*# sourceMappingURL=App.css.map */

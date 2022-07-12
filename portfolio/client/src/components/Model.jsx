@@ -1,61 +1,39 @@
-import {Canvas, useFrame, useLoader} from "@react-three/fiber";
-import {FBXLoader} from "three/examples/jsm/loaders/FBXLoader";
-import {Suspense} from "react";
-import {useRef} from "react";
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
+import model from "../static/dog.gltf"
 
-import {TextureLoader} from 'three/src/loaders/TextureLoader'
-
-const name = (type) => `/model/textures/AR_15_Compact_${type}.png`;
-
-function Scene() {
-    const fbx = useLoader(FBXLoader, '/model/source/AR15 Compact.fbx')
-    const [
-        colorMap,
-        metallicMap,
-        aoMap,
-        normalMap,
-        roughnessMap
-    ] = useLoader(TextureLoader, [
-        name("Base_color"),
-        name("Metallic"),
-        name("Mixed_AO"),
-        name("Normal_OpenGL"),
-        name("Roughness"),
-    ]);
-
-
-    const myMesh = useRef();
-    useFrame(({ clock }) => {
-        myMesh.current.rotation.y = clock.getElapsedTime()/4;
-    });
-
+export default function Model({ ...props }) {
+    const group = useRef();
+    const { nodes, materials } = useGLTF(model);
     return (
-        <>
-            <ambientLight intensity={200} />
-            <directionalLight />
-            <primitive ref={myMesh}
-                position={[0, -2.5, 0]}
-                rotation={[0, -1.5, 0]}
-                       map={colorMap}
-                       metallicMap={metallicMap}
-                       aoMap={aoMap}
-                       normalMap={normalMap}
-                       roughnessMap={roughnessMap}
-                       displacementScale={0.2}
-                       object={fbx} scale={0.0025} />
-        </>
-    )
+        <group position={[0,-2,0]} scale={2.5} ref={group} {...props} dispose={null}>
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Group18985.geometry}
+                material={materials["default"]}
+                position={[0, 1.31, 0.58]}
+                scale={1.38}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Box002.geometry}
+                material={materials["default"]}
+                position={[0, 1.31, 0.58]}
+                scale={1.38}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Object001.geometry}
+                material={materials["default"]}
+                position={[0, 1.31, 0.58]}
+                scale={1.38}
+            />
+        </group>
+    );
 }
 
-const Model = () => {
-    return (
-            <Canvas style={{height: 300}}>
-                <Suspense fallback={null}>
-                    <Scene/>
-                </Suspense>
-            </Canvas>
-    );
-};
-
-export default Model;
+useGLTF.preload(model);

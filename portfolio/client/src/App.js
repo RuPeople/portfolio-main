@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {observer} from "mobx-react-lite";
 import './App.css';
-import {ChakraProvider, ColorModeScript, theme} from '@chakra-ui/react'
 import Header from "./components/Header";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter} from "react-router-dom";
-import Model from "./components/Model";
-import Main from "./pages/Main";
-
 import "./fonts/Satoshi-Regular.otf"
 import "./fonts/Satoshi-MediumItalic.otf"
 import "./fonts/Satoshi-Medium.otf"
@@ -22,14 +18,14 @@ import "./fonts/Satoshi-Variable.ttf"
 import "./fonts/Satoshi-VariableItalic.ttf"
 import Footer from "./components/Footer";
 import AppRouter from "./components/AppRouter";
+import ModelCanvas from "./components/ModelCanvas";
 
 
 const App = observer(() => {
-
     return (
         <BrowserRouter>
             <Header/>
-            <Model/>
+            <ModelCanvas/>
             <AppRouter/>
             <Footer/>
         </BrowserRouter>
