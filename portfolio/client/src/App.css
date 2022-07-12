@@ -308,4 +308,8 @@ a {
   color: #FFFFFF;
 }
 
+.breadcrumbs ol {
+  padding: 0;
+}
+
 /*# sourceMappingURL=App.css.map */
