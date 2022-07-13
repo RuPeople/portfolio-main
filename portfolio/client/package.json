@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://rupeople.github.io/portfolio/",
+  "homepage": "https://rupeople.github.io/portfolio-main/",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
