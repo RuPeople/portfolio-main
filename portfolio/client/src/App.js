@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import AppRouter from "./components/AppRouter";
 import ModelCanvas from "./components/ModelCanvas";
 
+console.log(process.env.REACT_APP_API_URL)
 
 const App = observer(() => {
     return (

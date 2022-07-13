@@ -4,7 +4,6 @@ import BreadcrumbSeparator from "../static/BreadcrumbSeparator";
 import {AnimatePresence, motion} from "framer-motion";
 import {NavLink} from "react-router-dom";
 import {PORTFOLIO_ROUTE} from "../utils/consts";
-import ExternalLinkIcon from "../static/ExternalLinkIcon";
 
 const Work = () => {
     const work = {id:1, name: "sprint", smallDescription: "An online store of goods for fishing from outdoor activities", thumbnail: "https://picsum.photos/250/160" , bigDescription: "An online store of goods for fishing from outdoor activities. An online store of goods for fishing from outdoor activities", website: "https://sprint.tk/", stack: "MODX, Bootstrap, Swiper", year: "2022",

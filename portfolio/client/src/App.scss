@@ -362,8 +362,7 @@ a {text-decoration: none!important;}
   }
   .portfolio__work{
     .portfolio__work_image{
-      width: 284px;
-      height: 186px;
+      height: 185px!important;
     }
   }
 }
@@ -404,8 +403,8 @@ a {text-decoration: none!important;}
 
     color: #6E5981;
   }
-
 }
+
 .work{
   .work__description{
     font-family: 'Satoshi Variable';

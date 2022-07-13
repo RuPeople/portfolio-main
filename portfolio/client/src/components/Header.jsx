@@ -1,10 +1,9 @@
 import React, {useRef} from 'react';
-import {Link, Menu, MenuButton, MenuItem, MenuList, useColorMode} from "@chakra-ui/react";
-import {Button, Container, Offcanvas, Dropdown, Form, Nav, Navbar, NavDropdown, DropdownButton} from "react-bootstrap";
-import { NavLink} from "react-router-dom";
-import {MAIN_ROUTE, PORTFOLIO_ROUTE} from "../utils/consts";
+import {Link, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react";
+import {Container, Nav, Navbar} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
+import {PORTFOLIO_ROUTE} from "../utils/consts";
 
-import {AnimatePresence, motion, useCycle} from "framer-motion";
 import HamburgerIcon from "../static/HamburgerIcon";
 import GithubIcon from "../static/GithubIcon";
 import CloseIcon from "../static/CloseIcon";
