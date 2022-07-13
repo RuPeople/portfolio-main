@@ -27,7 +27,7 @@ const Portfolio = observer(() => {
 
                 <div className="portfolio__category d-flex flex-column justify-content-start align-items-start my-5">
                     <h1 className="mb-2 h-auto w-auto pb-1">Web</h1>
-                    <Row className="d-flex flex-row justify-content-between row-cols-1 row-cols-sm-2 mb-5">
+                    <div className="d-flex flex-wrap flex-row justify-content-between row-cols-1 row-cols-sm-2 mb-5">
                         {
                             work.works.map(work =>
                                 <motion.div onClick={() => navigate(WORK_ROUTE + '/' + work.id)}
@@ -38,14 +38,14 @@ const Portfolio = observer(() => {
                                             viewport={{ once: true }}
                                             whileHover={{scale:1.025}}
 
-                                            className="portfolio__work d-flex flex-column justify-content-center align-items-center">
+                                            className="portfolio__work h-100 d-flex flex-column justify-content-center align-items-center">
                                     <img className="portfolio__work_image mb-2" src={process.env.REACT_APP_API_URL + work.thumbnail}/>
                                     <h1 className="portfolio__work_name text-center mb-2">{work.name}</h1>
                                     <p className="portfolio__work_description">{work.smallDescription}</p>
                                 </motion.div>
                             )
                         }
-                    </Row>
+                    </div>
                 </div>
             </motion.section>
         </AnimatePresence>

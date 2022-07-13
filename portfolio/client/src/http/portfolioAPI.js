@@ -9,7 +9,7 @@ export const fetchWorks = async () => {
     return data
 }
 export const fetchOneWork = async (id) => {
-    const {data} = await $host.get('api/work' + id)
+    const {data} = await $host.get('api/work/' + id)
     return data
 
 }

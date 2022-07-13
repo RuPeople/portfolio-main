@@ -1,19 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Badge, Breadcrumb, BreadcrumbItem, BreadcrumbLink, List, ListItem} from "@chakra-ui/react";
 import BreadcrumbSeparator from "../static/BreadcrumbSeparator";
 import {AnimatePresence, motion} from "framer-motion";
 import {NavLink} from "react-router-dom";
 import {PORTFOLIO_ROUTE} from "../utils/consts";
+import {fetchOneWork} from "../http/portfolioAPI";
+
+import {useParams} from "react-router-dom";
 
 const Work = () => {
-    const work = {id:1, name: "sprint", smallDescription: "An online store of goods for fishing from outdoor activities", thumbnail: "https://picsum.photos/250/160" , bigDescription: "An online store of goods for fishing from outdoor activities. An online store of goods for fishing from outdoor activities", website: "https://sprint.tk/", stack: "MODX, Bootstrap, Swiper", year: "2022",
-        images: [
-            {id:1, href:"https://picsum.photos/520/300"},
-            {id:2, href:"https://picsum.photos/520/300"},
-            {id:3, href:"https://picsum.photos/520/300"},
-            {id:4, href:"https://picsum.photos/520/300"},
-        ]
-    }
+    const [work, setWork] = useState({info:[]})
+    const {id} = useParams()
+    console.log(id)
+
+    useEffect(() => {
+        fetchOneWork(id).then(data => setWork(data))
+    },[])
 
     return (
         <AnimatePresence>
@@ -78,13 +80,11 @@ const Work = () => {
                         }
                     </List>
                     <div className="work__gallery">
-                        {work.images.map((image) =>
-                            <motion.img
-                                initial={{ opacity: 0, x:100 }}
-                                whileInView={{ opacity: 1, x:0 }}
-                                viewport={{ once: true }}
-                                className="w-100 mb-3" style={{borderRadius: 10}} key={image.id} src={image.href}/>
-                        )}
+                        <motion.img
+                            initial={{ opacity: 0, x:100 }}
+                            whileInView={{ opacity: 1, x:0 }}
+                            viewport={{ once: true }}
+                            className="w-100 mb-3" style={{borderRadius: 10}} src={work.thumbnail}/>
                     </div>
                 </section>
             </motion.section>
