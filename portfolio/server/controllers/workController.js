@@ -6,12 +6,12 @@ const ApiError = require('../error/ApiError')
 class  WorkController {
     async create (req, res, next) {
         try{
-            const {name, category, smallDescription, bigDescription, website, stack, year} = req.body
+            const {name, smallDescription, bigDescription, website, stack, year} = req.body
             const {thumbnail} = req.files
             let fileName = uuid.v4() + ".svg"
             await thumbnail.mv(path.resolve(__dirname, '..', 'static', fileName))
 
-            const work = await Work.create({name, category, smallDescription, bigDescription, website, stack, year, thumbnail:fileName})
+            const work = await Work.create({name, smallDescription, bigDescription, website, stack, year, thumbnail:fileName})
             return res.json(work)
         }
         catch (e) {

@@ -11,7 +11,6 @@ const User = sequelize.define('user',{
 const Work = sequelize.define('work',{
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING},
-    category: {type: DataTypes.STRING},
     smallDescription: {type: DataTypes.STRING},
     thumbnail: {type: DataTypes.STRING},
     bigDescription: {type: DataTypes.STRING},
@@ -20,9 +19,26 @@ const Work = sequelize.define('work',{
     year: {type: DataTypes.INTEGER}
 })
 
+const Image = sequelize.define('image',{
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    img: {type: DataTypes.STRING},
+})
+
+const Category = sequelize.define('category', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    name: {type: DataTypes.STRING}
+})
+
+Work.hasMany(Image)
+Image.belongsTo(Work)
+
+Category.hasMany(Work)
+Work.belongsTo(Category)
 
 module.exports = {
     User,
-    Work
+    Image,
+    Work,
+    Category
 }
 

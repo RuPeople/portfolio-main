@@ -11,5 +11,12 @@ export const fetchWorks = async () => {
 export const fetchOneWork = async (id) => {
     const {data} = await $host.get('api/work/' + id)
     return data
-
+}
+export const createCategory = async (category) => {
+    const {data} = await $authHost.post('api/category', category)
+    return data
+}
+export const fetchCategories = async () => {
+    const {data} = await $host.get('api/category')
+    return data
 }

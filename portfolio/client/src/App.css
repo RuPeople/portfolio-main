@@ -17,6 +17,20 @@ a {
   background: #816797;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: #202023;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #816797;
+  border-radius: 10px;
+}
+
 .header {
   background: rgba(32, 32, 35, 0.5019607843);
   backdrop-filter: blur(10px);
@@ -308,7 +322,7 @@ a {
   color: #FFFFFF;
 }
 .portfolio .portfolio__work .portfolio__work_image {
-  height: 185px !important;
+  width: 100%;
 }
 
 .breadcrumbs ol {

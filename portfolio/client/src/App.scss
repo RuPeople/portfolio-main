@@ -20,6 +20,22 @@ a {text-decoration: none!important;}
   background: $main-color__accent_dark;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: $main-color__bg_dark
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $main-color__accent_dark;
+  border-radius: 10px;
+}
+
+
+
 
 .header {
   background: #20202380;
@@ -362,7 +378,7 @@ a {text-decoration: none!important;}
   }
   .portfolio__work{
     .portfolio__work_image{
-      height: 185px!important;
+      width: 100%;
     }
   }
 }

@@ -27,7 +27,7 @@ const Portfolio = observer(() => {
 
                 <div className="portfolio__category d-flex flex-column justify-content-start align-items-start my-5">
                     <h1 className="mb-2 h-auto w-auto pb-1">Web</h1>
-                    <div className="d-flex flex-wrap flex-row justify-content-between row-cols-1 row-cols-sm-2 mb-5">
+                    <div className="d-flex flex-wrap flex-row justify-content-between row-cols-1 row g-2 row-cols-sm-2 mb-5">
                         {
                             work.works.map(work =>
                                 <motion.div onClick={() => navigate(WORK_ROUTE + '/' + work.id)}
